@@ -1,3 +1,5 @@
+import kotlin.math.pow
+
 fun main(args: Array<String>)  {
     //Exercício 1
 
@@ -10,13 +12,13 @@ fun main(args: Array<String>)  {
     A area do quadrado e de 144 e seu perimetro de 48    */
 
 
-//    println("Digite o lado do quadrado:")
-//    var lado = readln().toDouble()
-//
-//    var area = lado * 2
-//    var perimetro = lado * 4
-//
-//    println("A área do quadrado é de $area e seu perímetro de $perimetro")
+    println("Digite o lado do quadrado:")
+    var lado = readln().toDouble()
+
+    var area = lado.pow(2)
+    var perimetro = lado * 4
+
+    println("A área do quadrado é de $area e seu perímetro de $perimetro")
 
     // #############################################
     // Exercício 2
@@ -47,13 +49,13 @@ fun main(args: Array<String>)  {
 
     nick gerado: masoriedem84  */
 
-    println("Digite seu nome:")
-    var name: String = readln().substring(0, 2).lowercase()
-    println("Digite seu sobrenome:")
-    var surname: String = readln().reversed().lowercase()
-    println("Digite sua data de nascimento:")
-    var birthday: Int = readln().toInt()
-    var birthdayString: String = birthday.toString().substring(2,4)
-
-    println(name + surname + birthdayString)
+//    println("Digite seu nome:")
+//    var name: String = readln().substring(0, 2).lowercase()
+//    println("Digite seu sobrenome:")
+//    var surname: String = readln().reversed().lowercase()
+//    println("Digite sua data de nascimento:")
+//    var birthday: Int = readln().toInt()
+//    var birthdayString: String = birthday.toString().substring(2,4)
+//
+//    println(name + surname + birthdayString)
 }
