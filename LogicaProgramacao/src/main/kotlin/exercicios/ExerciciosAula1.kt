@@ -16,7 +16,7 @@ fun main(args: Array<String>)  {
     var lado = readln().toDouble()
 
     var area = lado.pow(2)
-    var perimetro = lado * 4
+    var perimetro = lado * MULTIPLICADOR_PERIMETRO
 
     println("A área do quadrado é de $area e seu perímetro de $perimetro")
 
@@ -59,3 +59,5 @@ fun main(args: Array<String>)  {
 //
 //    println(name + surname + birthdayString)
 }
+
+private const val MULTIPLICADOR_PERIMETRO = 4
