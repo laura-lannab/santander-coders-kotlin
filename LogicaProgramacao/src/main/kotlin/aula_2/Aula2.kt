@@ -61,7 +61,7 @@ fun main(args: Array<String>) {
         when{
             number > random -> println("O número secreto é menor do que o escolhido")
             number < random -> println("O número secreto é maior do que o escolhido")
-
+            else -> println("Você acertou!!")
         }
     }while (number != random)
 
