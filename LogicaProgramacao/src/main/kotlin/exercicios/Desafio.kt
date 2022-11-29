@@ -66,24 +66,23 @@ val categorias = """
 """.trimIndent()
 
 val menuPaes = """
-        1 - $produtoPaoFrances...........${NumberFormat.getCurrencyInstance(ptBr).format(valorPaoFrances)}
-        2 - $produtoPaoDeLeite..........${NumberFormat.getCurrencyInstance(ptBr).format(valorPaoDeLeite)}
-        3 - $produtoPaoDeMilho..........${NumberFormat.getCurrencyInstance(ptBr).format(valorPaoDeMilho)}
+        1 - $produtoPaoFrances...........${formataNumero(valorPaoFrances)}
+        2 - $produtoPaoDeLeite..........${formataNumero(valorPaoDeLeite)}
+        3 - $produtoPaoDeMilho..........${formataNumero(valorPaoDeMilho)}
         0 - Voltar
     """.trimIndent()
 
-
 val menuSalgados = """
-        1 - $produtoCoxinha...........${NumberFormat.getCurrencyInstance(ptBr).format(valorCoxinha)}
-        2 - $produtoEsfiha..........${NumberFormat.getCurrencyInstance(ptBr).format(valorEsfiha)}
-        3 - $produtoPaoDeQueijo..........${NumberFormat.getCurrencyInstance(ptBr).format(valorPaoDeQueijo)}
+        1 - $produtoCoxinha...........${formataNumero(valorCoxinha)}
+        2 - $produtoEsfiha..........${formataNumero(valorEsfiha)}
+        3 - $produtoPaoDeQueijo..........${formataNumero(valorPaoDeQueijo)}
         0 - Voltar
     """.trimIndent()
 
 val menuDoces = """
-        1 - $produtoCarolina...........${NumberFormat.getCurrencyInstance(ptBr).format(valorCarolina)}
-        2 - $produtoPudim..........${NumberFormat.getCurrencyInstance(ptBr).format(valorPudim)}
-        3 - $produtoBrigadeiro..........${NumberFormat.getCurrencyInstance(ptBr).format(valorBrigadeiro)}
+        1 - $produtoCarolina...........${formataNumero(valorCarolina)}
+        2 - $produtoPudim..........${formataNumero(valorPudim)}
+        3 - $produtoBrigadeiro..........${formataNumero(valorBrigadeiro)}
         0 - Voltar
     """.trimIndent()
 
@@ -123,7 +122,7 @@ fun main() {
 
             println(
                 linhaComanda + "Total ===========================================> ${
-                    NumberFormat.getCurrencyInstance(ptBr).format(total)
+                    formataNumero(total)
                 }\n" + finalComanda
             )
         }
@@ -185,8 +184,8 @@ fun itemComanda(
     valorUnitario: Double,
     total: Double,
 ): String = "${itensComanda.size.inc()}$LINHA$produto$LINHA$quantidade$LINHA${
-    NumberFormat.getCurrencyInstance(ptBr).format(valorUnitario)
-}${LINHA}${NumberFormat.getCurrencyInstance(ptBr).format(total)}"
+    formataNumero(valorUnitario)
+}${LINHA}${formataNumero(total)}"
 
 fun aplicaDesconto(cupom: String) {
     if (cupomPorcentagemAplicada + cupomSubtracaoAplicada > 0) {
@@ -210,4 +209,8 @@ fun aplicaDesconto(cupom: String) {
             }
         }
     }
+}
+
+fun formataNumero(number: Double) {
+    NumberFormat.getCurrencyInstance(ptBr).format(number)
 }
