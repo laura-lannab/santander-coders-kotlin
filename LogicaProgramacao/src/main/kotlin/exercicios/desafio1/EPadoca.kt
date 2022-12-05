@@ -11,8 +11,6 @@ private const val FINALIZAR = 0
 
 private const val LINHA = ".........."
 
-val ptBr = Locale("pt", "BR")
-
 const val valorPaoFrances = 0.60
 const val valorPaoDeLeite = 0.40
 const val valorPaoDeMilho = 0.50
@@ -212,5 +210,6 @@ fun aplicaDesconto(cupom: String) {
 }
 
 fun formataNumero(number: Double) {
+    val ptBr = Locale("pt", "BR")
     NumberFormat.getCurrencyInstance(ptBr).format(number)
 }
