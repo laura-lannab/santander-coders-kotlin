@@ -33,8 +33,8 @@ class SmartTvDevide(deviceName: String, deviceCategory: String) :
 }
 
 fun main() {
-    val smartTvDevice = SmartDevice("Android TV", "Entertainment")
-    println("Device name is: ${smartTvDevice.name}")
-    smartTvDevice.turnOn()
-    smartTvDevice.turnOff()
+//    val smartTvDevice = SmartDevice("Android TV", "Entertainment")
+//    println("Device name is: ${smartTvDevice.name}")
+//    smartTvDevice.turnOn()
+//    smartTvDevice.turnOff()
 }
