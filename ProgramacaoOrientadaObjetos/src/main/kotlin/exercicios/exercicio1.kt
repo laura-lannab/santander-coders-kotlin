@@ -4,9 +4,7 @@ class Empresa(
     val id: Int,
     val nome: String,
     var email: String,
-) {
-
-}
+)
 
 class Funcionario(
     val id: Int,
