@@ -4,7 +4,7 @@ data class Node<T>(
     var value: T,
     var next: Node<T>?
 )
-data class LinkedList<T>(
+private data class LinkedList<T>(
     var head: Node<T>? = null
 ) {
     fun add(value: T) {
