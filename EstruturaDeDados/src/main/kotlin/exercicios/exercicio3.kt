@@ -2,32 +2,27 @@ package exercicios
 
 import java.util.*
 
-class exercicio3 {
-}
+data class Person(val name: String, val age: Int)
 
-data class Person(val name: String, val age: Int){
-
-}
-
-class Bank{
+class Bank {
     private val queue = PriorityQueue<Person>()
 
-    fun add(person: Person){
+    fun add(person: Person) {
         queue.offer(person)
     }
 
-    fun execute(){
+    fun execute() {
         var current = queue.poll()
-        while (current != null){
+        while (current != null) {
             println(current)
             current = queue.poll()
         }
     }
 }
 
-fun main(){
+fun main() {
     val bank = Bank()
-    bank.add(Person(name="Lalala", age= 30))
+    bank.add(Person(name = "Lalala", age = 30))
 }
 
 /*
