@@ -1,14 +1,14 @@
 package exercicios
 
-data class Node<T>(
+data class Node1<T>(
     var value: T,
-    var next: Node<T>?
+    var next: Node1<T>?
 )
 private data class LinkedList<T>(
-    var head: Node<T>? = null
+    var head: Node1<T>? = null
 ) {
     fun add(value: T) {
-        val newNode = Node(value = value, null)
+        val newNode = Node1(value = value, null)
         if (head == null) {
             head = newNode
             return
